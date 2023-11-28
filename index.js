@@ -5,6 +5,11 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
+app.use(express.json());
+
+// Body parser for URL-encoded payloads
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/scrape", (req, res) => {
   scrapeLogic(res);
 });

@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 require("dotenv").config();
 
-const scrapeLogic = async (req, res) => {
+const screenshotLogic = async (req, res) => {
   const browser = await puppeteer.launch({
     args: [
       "--disable-setuid-sandbox",
@@ -36,4 +36,4 @@ const scrapeLogic = async (req, res) => {
   }
 };
 
-module.exports = { scrapeLogic };
+module.exports = { screenshotLogic };

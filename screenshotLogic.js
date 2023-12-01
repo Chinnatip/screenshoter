@@ -21,7 +21,7 @@ const screenshotLogic = async (req, res) => {
     await page.goto(url);
 
     // Set screen size
-    await page.setViewport({ width: 3480, height: 1964 });
+    await page.setViewport({ width: 1240, height: 1080 });
 
     // Type into search box
     const screenshot = await page.screenshot({ fullPage: true });
